@@ -478,7 +478,7 @@
 {"name":"20th Century Fox"},
 {"name":"Walt Disney Pictures"},
 {"name":"New Line Cinema"},
-{"name":"Columbia Pictures"},
+{"name":"Columbia Pictures"}
 
 
 ],
@@ -722,6 +722,6 @@
 {"source":476,"target":236,"value":55000000},
 {"source":477,"target":237,"value":136000000},
 {"source":478,"target":238,"value":75000000},
-{"source":479,"target":239,"value":138000000},
+{"source":479,"target":239,"value":138000000}
 
 ]}
