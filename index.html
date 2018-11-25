@@ -38,8 +38,8 @@ canvas {
 </style>
 </head>
 <body>
-<canvas width="2000" height="2000" ></canvas>
-<svg width="2000" height="2000" ></svg>
+<canvas width="10000" height="10000" ></canvas>
+<svg width="10000" height="10000" ></svg>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js" charset="utf-8" type="text/javascript"></script>
 <script src="d3.sankey.js" charset="utf-8" type="text/javascript"></script>
@@ -164,7 +164,7 @@ d3.json("energy.json", function(energy) {
   function particleEdgeCanvasPath(elapsed) {
     var context = d3.select("canvas").node().getContext("2d")
 
-    context.clearRect(0,0,2000,2000);
+    context.clearRect(0,0,10000,10000);
 
       context.fillStyle = "gray";
       context.lineWidth = "1px";
