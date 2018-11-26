@@ -13,10 +13,10 @@ qSVG.selectAll(".txt")
     .attr("class", "txt")
     .attr("x", 10)
     .attr("y", function(d, i) {
-        return 600 + i * 600
+        return 650 + i * 400
     })
     .transition()
-    .duration(3000)
+    .duration(300000)
         .tween("text", function(d) {
             var i = d3.interpolate(this.textContent, d),
                 prec = (d + "").split("."),
