@@ -1,6 +1,7 @@
 var start_val = 0,
-    duration = 5000,
-    end_val = [0.06, 14, 1.33333, -232332312.00, 99999];
+    duration = 3000,
+    end_val = [100, 100, 100, 100, 100];
+    studios = [0.06, 14, 1.33333, -232332312.00, 99999];
 
 var qSVG = d3.select("body").append("svg").attr("width", 200).attr("height", 200);
 
@@ -8,7 +9,7 @@ qSVG.selectAll(".txt")
     .data(end_val)
     .enter()
     .append("text")
-    .text(start_val)
+    .text(studios, start_val)
     .attr("class", "txt")
     .attr("x", 10)
     .attr("y", function(d, i) {
