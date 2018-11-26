@@ -12,8 +12,9 @@ qSVG.selectAll(".txt")
     .text(start_val)
     .attr("class", "txt")
     .attr("x", 10)
+//     .attr("y", function(d, i) {0,10,20,30,40,50}
     .attr("y", function(d, i) {
-        return 640 + i * 420
+        return 640 + i * 360
     })
     .transition()
     .duration(300000)
