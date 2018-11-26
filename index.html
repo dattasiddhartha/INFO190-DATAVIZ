@@ -53,7 +53,7 @@ var margin = {top: 1, right: 1, bottom: 6, left: 1},
     height = 4000 - margin.top - margin.bottom;
 
 var formatNumber = d3.format(",.0f"),
-    format = function(d) { return formatNumber(d) + " TWh"; },
+    format = function(d) { return formatNumber(d) + " billion"; },
     color = d3.scale.category20();
 
 var svg = d3.select("svg")
@@ -104,7 +104,7 @@ d3.json("energy.json", function(energy) {
       .attr("height", function(d) { return d.dy; })
       .attr("width", sankey.nodeWidth())
 //       .style("fill", function(d) { return d.color = color(d.name.replace(/ .*/, "")); })
-      .style("fill", function(d) { return d.color = red; })
+      .style("fill", function(d) { return d.color="red"; })
       .style("stroke", "none")
     .append("title")
       .text(function(d) { return d.name + "\n" + format(d.value); });
