@@ -1,9 +1,8 @@
-var start_val = [10, 10, 10, 10, 10],
-    duration = 500,
-    name = [100, 100, 100, 100, 100],
-    end_val = [100, 100, 100, 100, 100];
+var start_val = [4160000000,1912000000,4630000000,3846000000,1667000000,1420000000,4023000000,1500000000,1955000000],
+    duration = 5000,
+    end_val = [8031000000,4068000000,8202000000,8792000000,3080000000,4995000000,8761000000,3324000000,4714000000];
 
-var qSVG = d3.select("body").append("svg").attr("width", 200).attr("height", 200);
+var qSVG = d3.select("body").append("svg").attr("width", 10000).attr("height", 40000);
 
 qSVG.selectAll(".txt")
     .data(end_val)
@@ -13,7 +12,7 @@ qSVG.selectAll(".txt")
     .attr("class", "txt")
     .attr("x", 10)
     .attr("y", function(d, i) {
-        return 50 + i * 30
+        return 50 + i * 300
     })
     .transition()
     .duration(3000)
