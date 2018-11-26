@@ -1,3 +1,31 @@
+var start_val = 0,
+    duration = 5000,
+    end_val = [0.06, 14, 1.33333, -232332312.00, 99999];
+
+var qSVG = d3.select("body").append("svg").attr("width", 200).attr("height", 200);
+
+qSVG.selectAll(".txt")
+    .data(end_val)
+    .enter()
+    .append("text")
+    .text(start_val)
+    .attr("class", "txt")
+    .attr("x", 10)
+    .attr("y", function(d, i) {
+        return 50 + i * 30
+    })
+    .transition()
+    .duration(3000)
+        .tween("text", function(d) {
+            var i = d3.interpolate(this.textContent, d),
+                prec = (d + "").split("."),
+                round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
+
+            return function(t) {
+                this.textContent = Math.round(i(t) * round) / round;
+            };
+        });
+
 d3.sankey = function() {
   var sankey = {},
       nodeWidth = 24,
