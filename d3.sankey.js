@@ -9,7 +9,7 @@ qSVG.selectAll(".txt")
     .data(end_val)
     .enter()
     .append("text")
-    .text(name, start_val)
+    .text(start_val)
     .attr("class", "txt")
     .attr("x", 10)
     .attr("y", function(d, i) {
