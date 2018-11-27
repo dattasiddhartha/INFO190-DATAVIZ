@@ -1,34 +1,3 @@
-// var start_val = [4160000000,1912000000,4630000000,3846000000,1667000000,1420000000,4023000000,1500000000,1955000000],
-var start_val = 0,
-    duration = 5000,
-//     end_val = [8031000000,4068000000,8202000000,8792000000,3080000000,4995000000,8761000000,3324000000,4714000000];
-    end_val = [4714000000, 8761000000, 8031000000, 8202000000,8792000000];
-
-var qSVG = d3.select("body").append("svg").attr("width", 1000).attr("height", 1000);
-
-qSVG.selectAll(".txt")
-    .data(end_val)
-    .enter()
-    .append("text")
-    .text(start_val)
-    .attr("class", "txt")
-    .attr("x", 10)
-//     .attr("y", function(d, i) {0,10,20,30,40,50}
-    .attr("y", function(d, i) {
-        return 10 + i * 175
-    })
-    .transition()
-    .duration(300000)
-        .tween("text", function(d) {
-            var i = d3.interpolate(this.textContent, d),
-                prec = (d + "").split("."),
-                round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
-
-            return function(t) {
-                this.textContent = Math.round(i(t) * round) / round;
-            };
-        });
-
 d3.sankey = function() {
   var sankey = {},
       nodeWidth = 24,
@@ -323,3 +292,34 @@ d3.sankey = function() {
 
   return sankey;
 };
+
+// var start_val = [4160000000,1912000000,4630000000,3846000000,1667000000,1420000000,4023000000,1500000000,1955000000],
+var start_val = 0,
+    duration = 5000,
+//     end_val = [8031000000,4068000000,8202000000,8792000000,3080000000,4995000000,8761000000,3324000000,4714000000];
+    end_val = [4714000000, 8761000000, 8031000000, 8202000000,8792000000];
+
+var qSVG = d3.select("body").append("svg").attr("width", 1000).attr("height", 1000);
+
+qSVG.selectAll(".txt")
+    .data(end_val)
+    .enter()
+    .append("text")
+    .text(start_val)
+    .attr("class", "txt")
+    .attr("x", 10)
+//     .attr("y", function(d, i) {0,10,20,30,40,50}
+    .attr("y", function(d, i) {
+        return 10 + i * 200
+    })
+    .transition()
+    .duration(300000)
+        .tween("text", function(d) {
+            var i = d3.interpolate(this.textContent, d),
+                prec = (d + "").split("."),
+                round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
+
+            return function(t) {
+                this.textContent = Math.round(i(t) * round) / round;
+            };
+        });
