@@ -95,7 +95,7 @@
 {"name":"20th Century Fox 4,713m"},
 {"name":"Warner Bros. 8,762m"},
 {"name":"Walt Disney Pictures 8,031m"},
-{"name":"Universal Pictures 8,792m"},
+{"name":"Universal Pictures 8,792m"}
 ],
 "links":[
 {"source":4,"target":11,"value":2.75},
@@ -221,5 +221,5 @@
 {"source":77,"target":93,"value":3.7482576},
 {"source":75,"target":92,"value":4.90875846},
 {"source":89,"target":96,"value":1.42424154},
-{"source":90,"target":95,"value":0.39549758},
+{"source":90,"target":95,"value":0.39549758}
 ]}
