@@ -117,6 +117,7 @@ d3.json("energy.json", function(energy) {
       .attr("dy", ".35em")
       .attr("text-anchor", "end")
       .attr("transform", null)
+      .style("font-size", 8)
       .text(function(d) { return d.name; })
     .filter(function(d) { return d.x < width / 2; })
       .attr("x", 6 + sankey.nodeWidth())
