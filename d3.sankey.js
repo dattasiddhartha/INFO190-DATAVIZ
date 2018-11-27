@@ -4,7 +4,7 @@ var start_val = 0,
 //     end_val = [8031000000,4068000000,8202000000,8792000000,3080000000,4995000000,8761000000,3324000000,4714000000];
     end_val = [4714000000, 8761000000, 8031000000, 8202000000,8792000000];
 
-var qSVG = d3.select("body").append("svg").attr("width", 10000).attr("height", 40000);
+var qSVG = d3.select("body").append("svg").attr("width", 1000).attr("height", 1000);
 
 qSVG.selectAll(".txt")
     .data(end_val)
