@@ -1,4 +1,6 @@
-var svg = d3.select("body")
+d3.sankey = function() {
+  
+  var svg = d3.select("body")
   .append("svg")
   .attr("width", "100%")
   .attr("height", "100%")
@@ -6,8 +8,7 @@ var svg = d3.select("body")
     svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
   }))
   .append("g")
-
-d3.sankey = function() {
+  
   var sankey = {},
       nodeWidth = 24,
       nodePadding = 8,
