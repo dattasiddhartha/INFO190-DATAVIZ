@@ -310,7 +310,7 @@ qSVG.selectAll(".txt")
     .attr("x", 10)
 //     .attr("y", function(d, i) {0,10,20,30,40,50}
     .attr("y", function(d, i) {
-        return 70 + i * 100
+        return 50 + i * 100
     })
     .transition()
     .duration(300000)
